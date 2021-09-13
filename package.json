@@ -2,6 +2,8 @@
   "name": "dark-mode-backend",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
+
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -15,12 +17,10 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "engines": {
+    "node": "v14.7.0"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -38,8 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "v14.7.0"
   }
+  
 }
