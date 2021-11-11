@@ -11,10 +11,10 @@ createResult = (req, res) => {
       error: 'You must provide result',
     });
   }
-
+  console.log('Body provided: ', body);
   const result = new Result(body);
   if (!result) {
-    return res.status(400).json({ success: false, error: err });
+    return res.status(400).json({ success: false, error: 'Coult not create result: ' + err });
   }
 
   result
@@ -42,12 +42,11 @@ getAllResults = async (req, res) => {
     if (!results.length) {
       return res.status(404).json({ success: false, error: `No players found` });
     }
-    return res.status(200).json({ success: true, data: results});
+    return res.status(200).json({ success: true, data: results });
   }).catch((err) => console.log(err));
 };
 
-
 module.exports = {
   createResult,
-  getAllResults
+  getAllResults,
 };
